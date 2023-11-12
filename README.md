@@ -1,12 +1,17 @@
 # Zutilo
+
+**⚠️ This fork adds `open-pdf` URI similar to "Copy select item links." for `select` URI. In addition to an option to pass page numbers to the resulting URI. This is performed using "Copy open-pdf item links," "Copy paginated open-pdf item links" options.**
+
+---
+
 Zutilo is a plugin for [Zotero](http://www.zotero.org/).
 Zutilo adds several functions not available in base Zotero through extra menu items and keyboard shortcuts.
 Here are some of Zutilo's features:
 
-* Copy, paste, and remove sets of tags
-* Select and right-click to relate several items
-* Copy items to the clipboard in several formats
-* Keyboard shortcuts for editing items and focusing and hiding different elements of the Zotero user interface
+- Copy, paste, and remove sets of tags
+- Select and right-click to relate several items
+- Copy items to the clipboard in several formats
+- Keyboard shortcuts for editing items and focusing and hiding different elements of the Zotero user interface
 
 Zutilo strives to enable whatever Zotero workflow is desired and otherwise to get out of the way.
 All of Zutilo's graphical elements can be disabled individually, so that unwanted features do not clutter the user interface.

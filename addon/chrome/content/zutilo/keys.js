@@ -138,6 +138,14 @@ keys.categories.copyZoteroSelectLink = 'copying'
 keys.shortcuts.copyZoteroSelectLink = function(win) {
     win.ZutiloChrome.zoteroOverlay.copyZoteroSelectLink()
 };
+keys.categories.copyZoteroOpenPdfLink = 'copying'
+keys.shortcuts.copyZoteroOpenPdfLink = function(win) {
+    win.ZutiloChrome.zoteroOverlay.copyZoteroOpenPdfLink()
+};
+keys.categories.copyZoteroOpenPdfPaginatedLink = 'copying'
+keys.shortcuts.copyZoteroOpenPdfPaginatedLink = function(win) {
+    win.ZutiloChrome.zoteroOverlay.copyZoteroOpenPdfPaginatedLink()
+};
 keys.categories.copyZoteroItemURI = 'copying'
 keys.shortcuts.copyZoteroItemURI = function(win) {
     win.ZutiloChrome.zoteroOverlay.copyZoteroItemURI()

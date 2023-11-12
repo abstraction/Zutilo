@@ -794,6 +794,86 @@ ZutiloChrome.zoteroOverlay = {
         return true;
     },
 
+    copyZoteroOpenPdfLink: function() {
+        var zitems = this.getSelectedItems();
+        var links = [];
+
+        if (!this.checkItemNumber(zitems, 'regularNoteAttachment1')) {
+            return false;
+        }
+
+        var libraryType
+        var path
+        for (var ii = 0; ii < zitems.length; ii++) {
+
+            libraryType = Zotero.Libraries.get(zitems[ii].libraryID).libraryType
+
+            switch (libraryType) {
+                case 'group':
+                    path = Zotero.URI.getLibraryPath(zitems[ii].libraryID)
+                    break;
+                case 'user':
+                    path = 'library'
+                    break;
+                default:
+                    // Feeds?
+                    continue
+            }
+
+            links.push('zotero://open-pdf/' + path + '/items/'+ zitems[ii].key)
+        }
+
+        var clipboardText = links.join('\r\n');
+
+        this._copyToClipboard(clipboardText)
+
+        return true;
+    },
+
+    copyZoteroOpenPdfPaginatedLink: function() {
+        var zitems = this.getSelectedItems();
+        var links = [];
+
+        if (!this.checkItemNumber(zitems, 'regularNoteAttachment1')) {
+            return false;
+        }
+
+        var libraryType
+        var path
+        for (var ii = 0; ii < zitems.length; ii++) {
+
+            libraryType = Zotero.Libraries.get(zitems[ii].libraryID).libraryType
+
+            switch (libraryType) {
+                case 'group':
+                    path = Zotero.URI.getLibraryPath(zitems[ii].libraryID)
+                    break;
+                case 'user':
+                    path = 'library'
+                    break;
+                default:
+                    // Feeds?
+                    continue
+            }
+
+            links.push('zotero://open-pdf/' + path + '/items/'+ zitems[ii].key)
+        }
+
+        // TODO: This is based on the assumption that the user has only selected one link
+        // thus only asks for (1) pageination. For future updates, we can prompt can specify the file
+        // and then ask for page, will have to update loop for this. Currently single selection suffice
+
+        var pageNumber = prompt("Please specific page number (defaults to first page):", 1);
+
+        links.push('?page=' + pageNumber);
+
+        var clipboardText = links.join('\r\n');
+
+        this._copyToClipboard(clipboardText)
+
+        return true;
+    },
+
     _getZoteroItemURI: function() {
         let zitems = this.getSelectedItems();
         let links = [];
