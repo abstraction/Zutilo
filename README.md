@@ -1,6 +1,6 @@
 # Zutilo
 
-**⚠️ This fork adds `open-pdf` URI similar to "Copy select item links." for `select` URI. In addition to an option to pass page numbers to the resulting URI. This is performed using "Copy open-pdf item links," "Copy paginated open-pdf item links" options.**
+**⚠️ This fork adds `open-pdf` URI similar to "Copy select item links" used for `select` URI. In addition, this script also adds an option to pass page numbers to the resulting URI. These are performed using "Copy open-pdf item links", "Copy paginated open-pdf item links" options.**
 
 ---
 
